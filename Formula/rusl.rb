@@ -1,25 +1,25 @@
 class Rusl < Formula
   desc "The Rusl schema package manager CLI."
   homepage "https://github.com/rusl-labs/rusl-cli"
-  version "0.6.3"
+  version "0.6.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/rusl-labs/rusl-cli/releases/download/v0.6.3/rusl-aarch64-apple-darwin.tar.xz"
-      sha256 "c5100c6e0abcf996d71692c710cf82b362d18bed85855ee0896ac36d08486df7"
+      url "https://github.com/rusl-labs/rusl-cli/releases/download/v0.6.4/rusl-aarch64-apple-darwin.tar.xz"
+      sha256 "a7ce0fdad400ed172136f224fa1e80f3e55d312589729a547a532ef718fdc900"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rusl-labs/rusl-cli/releases/download/v0.6.3/rusl-x86_64-apple-darwin.tar.xz"
-      sha256 "04ce633c2a6351eec5b10207c430522b13baae94199aa07071283d6f11f81c09"
+      url "https://github.com/rusl-labs/rusl-cli/releases/download/v0.6.4/rusl-x86_64-apple-darwin.tar.xz"
+      sha256 "31da3233c8e29fdfbfadac29be378c0f37bebe5752d37d0989f003ca0dfe7d51"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/rusl-labs/rusl-cli/releases/download/v0.6.3/rusl-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "59e5f412b2d03884496b10e19750634f9ec2c2b4c3ac21f87077eb19246765cd"
+      url "https://github.com/rusl-labs/rusl-cli/releases/download/v0.6.4/rusl-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "0e3857a7b833c32cafce86004c1d96c24c076ca6990dfa2d9f921bbb6833cc30"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rusl-labs/rusl-cli/releases/download/v0.6.3/rusl-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "8ce303648d5449cb47b6f49718f66c85c24d56d5c6e85b637483ced0da030db7"
+      url "https://github.com/rusl-labs/rusl-cli/releases/download/v0.6.4/rusl-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "49c465760010385899eeec267be38fc630977294906e42a6c6fddb3421601c76"
     end
   end
   license "Apache-2.0"
@@ -48,10 +48,18 @@ class Rusl < Formula
   end
 
   def install
-    bin.install "rusl" if OS.mac? && Hardware::CPU.arm?
-    bin.install "rusl" if OS.mac? && Hardware::CPU.intel?
-    bin.install "rusl" if OS.linux? && Hardware::CPU.arm?
-    bin.install "rusl" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "rusl"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "rusl"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "rusl"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "rusl"
+    end
 
     install_binary_aliases!
 
