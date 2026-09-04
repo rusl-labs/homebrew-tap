@@ -1,25 +1,25 @@
 class Rusl < Formula
   desc "The Rusl schema package manager CLI."
   homepage "https://github.com/rusl-labs/rusl-cli"
-  version "0.6.4"
+  version "0.6.5"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/rusl-labs/rusl-cli/releases/download/v0.6.4/rusl-aarch64-apple-darwin.tar.xz"
-      sha256 "a7ce0fdad400ed172136f224fa1e80f3e55d312589729a547a532ef718fdc900"
+      url "https://github.com/rusl-labs/rusl-cli/releases/download/v0.6.5/rusl-aarch64-apple-darwin.tar.xz"
+      sha256 "7066280f29c697d78a453b696781069e6fc27ceae9552cc71518fc86045a14d6"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rusl-labs/rusl-cli/releases/download/v0.6.4/rusl-x86_64-apple-darwin.tar.xz"
-      sha256 "31da3233c8e29fdfbfadac29be378c0f37bebe5752d37d0989f003ca0dfe7d51"
+      url "https://github.com/rusl-labs/rusl-cli/releases/download/v0.6.5/rusl-x86_64-apple-darwin.tar.xz"
+      sha256 "f42f0b7172533c7f504d3721239fd05885e327d93f118056033c512871368f14"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/rusl-labs/rusl-cli/releases/download/v0.6.4/rusl-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "0e3857a7b833c32cafce86004c1d96c24c076ca6990dfa2d9f921bbb6833cc30"
+      url "https://github.com/rusl-labs/rusl-cli/releases/download/v0.6.5/rusl-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "41fe16aa0b67d7898b2b1a58a6ec73357b0546b1eef03d22aac1c54e39df5c26"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rusl-labs/rusl-cli/releases/download/v0.6.4/rusl-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "49c465760010385899eeec267be38fc630977294906e42a6c6fddb3421601c76"
+      url "https://github.com/rusl-labs/rusl-cli/releases/download/v0.6.5/rusl-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "66bb41f05077be008bfc02c60a3465a52b6e5411bcea336994977fbbc455e796"
     end
   end
   license "Apache-2.0"
